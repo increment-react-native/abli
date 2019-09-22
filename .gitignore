@@ -1,4 +1,4 @@
 components/
-navigation/
-redux/
 config.js
+services/api
+modules/basics
