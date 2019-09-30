@@ -7,6 +7,6 @@ export default {
     route: 'Scan'
   }, {
     title: 'My-Wallet',
-    route: 'EWallet'
+    route: 'Wallet'
   }]
 }
