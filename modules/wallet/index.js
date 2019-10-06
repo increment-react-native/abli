@@ -9,6 +9,10 @@ class Wallet extends Component{
       balance: 123456789
     };
   }
+
+  redirect = (route) => {
+    this.props.navigation.navigate(route);
+  }
   render() {
     return (
       <View style={Style.MainContainer}>
@@ -21,7 +25,7 @@ class Wallet extends Component{
         </View>
         <TouchableHighlight
           style={[BasicStyles.btn, BasicStyles.btnPrimary]}
-          onPress={() => this.redirect()}
+          onPress={() => this.redirect('walletHistoryStack')}
           underlayColor={Color.gray}>
           <Text style={BasicStyles.textWhite}>
             View Transaction History
@@ -29,7 +33,7 @@ class Wallet extends Component{
         </TouchableHighlight>
         <TouchableHighlight
           style={[BasicStyles.btn, BasicStyles.btnPrimary]}
-          onPress={() => this.redirect()}
+          onPress={() => this.redirect('transferFundsStack')}
           underlayColor={Color.gray}>
           <Text style={BasicStyles.textWhite}>
             Transfer Funds
