@@ -33,7 +33,7 @@ class Wallet extends Component{
         </TouchableHighlight>
         <TouchableHighlight
           style={[BasicStyles.btn, BasicStyles.btnPrimary]}
-          onPress={() => this.redirect('transferFundsStack')}
+          onPress={() => this.redirect('fundTransferStack')}
           underlayColor={Color.gray}>
           <Text style={BasicStyles.textWhite}>
             Transfer Funds

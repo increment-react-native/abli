@@ -1,11 +1,28 @@
 import React, { Component } from 'react';
-import { View, TouchableOpacity } from 'react-native';
+import Style from './Style.js';
+import { View, Image, Text, TouchableOpacity} from 'react-native';
+import { Routes, Color, Helper } from 'common';
 import { createStackNavigator } from 'react-navigation-stack';
-
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
-import History from 'modules/wallet/History';
-import { Color } from 'common';
+
+class FundTransfer extends Component{
+  constructor(props){
+    super(props);
+  }
+  render() {
+    return (
+      <View style={Style.MainContainer}>
+        <View style={Style.LogoContainer}>
+          <Image source={require('assets/logo.png')} style={Style.LogoSize}/>
+        </View>
+        <View style={Style.TextContainer}>
+          <Text>Welcome to {Helper.APP_NAME}</Text>
+        </View>
+      </View>
+    );
+  }
+}
 
 class HeaderOptions extends Component {
   constructor(props){
@@ -26,13 +43,13 @@ class HeaderOptions extends Component {
   }
 }
 
-const HistoryStack = createStackNavigator({
+const FundTransferStack = createStackNavigator({
   merchantScreen: {
-    screen: History, 
+    screen: FundTransfer, 
     navigationOptions: ({ navigation }) => ({
-      title: 'Transaction History',
+      title: 'Send',
       headerLeft: <HeaderOptions navigationProps={navigation} />,
-      drawerLabel: 'Transaction History',
+      drawerLabel: 'Send',
       headerStyle: {
         backgroundColor: Color.primary,
       },
@@ -41,4 +58,4 @@ const HistoryStack = createStackNavigator({
   }
 })
 
-export default HistoryStack;
+export default FundTransferStack;

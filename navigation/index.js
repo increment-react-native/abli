@@ -4,7 +4,8 @@ import Login from 'modules/basics/Login';
 import ForgotPassword from 'modules/basics/ForgotPassword';
 import Register from 'modules/basics/Register';
 import Drawer from './Drawer';
-import WalletHistoryStack from 'modules/wallet/HistoryStack';
+import WalletHistoryStack from 'modules/wallet/History';
+import FundTransferStack from 'modules/wallet/FundTransfer';
 
 
 
@@ -41,7 +42,8 @@ const PrimaryNav = createStackNavigator({
   forgotPasswordStack: { screen: ForgotPasswordStack},
   registerStack: { screen: RegisterStack},
   drawerStack: { screen: Drawer },
-  walletHistoryStack: { screen: WalletHistoryStack }
+  walletHistoryStack: { screen: WalletHistoryStack },
+  fundTransferStack: { screen: FundTransferStack}
 }, {
   // Default config for all screens
   headerMode: 'none',
